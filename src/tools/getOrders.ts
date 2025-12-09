@@ -215,7 +215,7 @@ const getOrders = {
         variables.query = searchQuery;
       }
 
-      const data = await shopifyClient.request(query, variables);
+      const data: any = await shopifyClient.request(query, variables);
       
       return {
         orders: data.orders.edges.map((edge: any) => edge.node),

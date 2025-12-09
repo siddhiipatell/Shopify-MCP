@@ -338,7 +338,7 @@ const getOrderById = {
         id: orderId
       };
 
-      const data = await shopifyClient.request(query, variables);
+      const data: any = await shopifyClient.request(query, variables);
       
       if (!data.order) {
         throw new Error(`Order not found with ID: ${orderId}`);
